@@ -52,12 +52,13 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "advanced.settings",
+    "settings.editor.selected.configurable": "configurable.group.project",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MartinParkerR\PycharmProjects\HeartScan_Classifier" />
       <recent name="C:\Users\MartinParkerR\PycharmProjects\cmr_report_diagnosis_classifier" />
     </key>
   </component>
@@ -78,6 +79,7 @@
       <updated>1728922753309</updated>
       <workItem from="1729022438217" duration="1991000" />
       <workItem from="1729024923185" duration="41918000" />
+      <workItem from="1729619854658" duration="362000" />
     </task>
     <servers />
   </component>
