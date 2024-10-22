@@ -7,7 +7,7 @@ This project is designed to automatically classify presence of disease in cardio
 1. A negation filter to quickly screen out negative reports.
 2. A fine-tuned BERT model to classify reports that are not easily categorized by the negation filter.
 
-Testing on our data has shown that using the negation filter reduces false positives but also significantly increases false negatives. This leads to an overall increased F1-score, but means that more studies which could be rightfully included are instead filtered out. Depending on the use case, this trade-off may or may not be desirable. Deployment of the negation filter is a toggleable option in the GUI.
+Testing on our data has shown that using the negation filter reduces false positives but also significantly increases false negatives. This leads to an overall decreased F1-score when compared to a well trained BERT model alone but can improve results if a fine-tuned model is struggling with negative sample exclusion. Depending on the use case, this trade-off may or may not be desirable. Deployment of the negation filter is a toggleable option in the GUI.
 
 The project aims to assist medical professionals by automating the process of categorizing CMR reports, making the workflow more efficient and providing a reliable basis for further review.
 
