@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8aca399a-4480-4951-adf3-a3204446d4ba" name="Changes" comment="" />
+    <list default="true" id="8aca399a-4480-4951-adf3-a3204446d4ba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/cmr_report_diagnosis_identifier.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/cmr_report_diagnosis_identifier.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -52,7 +57,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.project",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -79,7 +84,7 @@
       <updated>1728922753309</updated>
       <workItem from="1729022438217" duration="1991000" />
       <workItem from="1729024923185" duration="41918000" />
-      <workItem from="1729619854658" duration="362000" />
+      <workItem from="1729619854658" duration="1654000" />
     </task>
     <servers />
   </component>
@@ -102,6 +107,7 @@
     <SUITE FILE_PATH="coverage/cmr_report_diagnosis_classifier$fine_tune_bert.coverage" NAME="fine_tune_bert Coverage Results" MODIFIED="1729534970206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/cmr_report_diagnosis_classifier$bert_classifier.coverage" NAME="bert_classifier Coverage Results" MODIFIED="1729605097051" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/cmr_report_diagnosis_classifier$evaluate_model.coverage" NAME="evaluate_model Coverage Results" MODIFIED="1729273453167" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
+    <SUITE FILE_PATH="coverage/HeartScan_Classifier$generate_synthetic_data.coverage" NAME="generate_synthetic_data Coverage Results" MODIFIED="1729620459747" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/cmr_report_diagnosis_classifier$temp_test_train_overlap_check.coverage" NAME="temp_test_train_overlap_check Coverage Results" MODIFIED="1729534952839" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/cmr_report_diagnosis_classifier$main.coverage" NAME="main Coverage Results" MODIFIED="1729616412087" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
     <SUITE FILE_PATH="coverage/cmr_report_diagnosis_classifier$generate_synthetic_data.coverage" NAME="generate_synthetic_data Coverage Results" MODIFIED="1729534946685" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/scripts" />
