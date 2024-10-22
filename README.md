@@ -42,7 +42,7 @@ Clone the repository to your local machine by running the following command in y
 
 ```bash
 git clone <repository_url>
-cd cmr_report_classification_project
+cd HeartScan_Classifier
 ```
 
 ### 3. Install Dependencies
