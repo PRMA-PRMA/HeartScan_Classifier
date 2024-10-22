@@ -8,7 +8,8 @@ from bert_classifier import BERTClassifier
 from sklearn.metrics import classification_report
 import argparse
 
-def evaluate_model(model_path, test_data_file, disease_terms):
+
+def evaluate_model(model_path, test_data_file, disease_terms, use_negation_filter):
     # Load test data
     df = pd.read_csv(test_data_file)
 
@@ -27,8 +28,13 @@ def evaluate_model(model_path, test_data_file, disease_terms):
         text = row['Report_Text']
         true_label = row['Label']
 
-        # Classify the report for the evaluated disease
-        predicted_class = classifier.classify(disease, text)
+        # Apply negation filter if indicated
+        if use_negation_filter and negation_filter(text.lower(), disease_terms):
+            predicted_class = 0  # Negation filter classified as Negative
+        else:
+            # Classify the report for the evaluated disease
+            predicted_class = classifier.classify(disease, text)
+
         predicted_labels.append(predicted_class)
 
         # Check if the prediction is incorrect
@@ -84,10 +90,12 @@ def main():
                                  "hypertrophic cardiomyopathy", "HCM",
                                  "HOCM", "hypertrophic obstructive cardiomyopathy"
                                  ])
+    parser.add_argument('--use_negation_filter', action='store_true', help='Toggle use of negation filter')
 
     args = parser.parse_args()
+    print("args are:", args)
 
-    evaluate_model(args.model_path, args.test_data, args.disease_terms)
+    evaluate_model(args.model_path, args.test_data, args.disease_terms, args.use_negation_filter)
 
 
 if __name__ == '__main__':
@@ -97,5 +105,6 @@ if __name__ == '__main__':
 Example Usage:
 python scripts/evaluate_model.py --test_data data/test_data.csv
 python scripts/evaluate_model.py --model_path models/fine_tuned_bert --test_data data/test_data.csv
-python scripts/evaluate_model.py --model_path models/fine_tuned_bert --test_data data/combined_amyloid.csv --disease_terms amyloid amyloidosis
+python scripts/evaluate_model.py --model_path models/fine_tuned_bert --test_data data/combined_amyloid.csv --disease_terms amyloid amyloidosis --use_negation_filter
 '''
+
