@@ -105,7 +105,9 @@ To start the GUI, run the main script:
 python scripts/main.py
 ```
 
-This will open a window where you can select the input CSV file, define where you would like to save the results, specify the disease/diseases of interest, and toggle use of the negation filter.
+This will open a window where you can select the input CSV file, define where you would like to save the results, specify the disease/diseases of interest (comma seperated), and toggle use of the negation filter.
+
+For best results when specifying disease terms, include likely aliases you expect in your data. ie for if evaluating for amyloidosis you might type "amyloid, amyloidosis".
 
 ### Step 2: Processing Reports
 
@@ -137,7 +139,16 @@ These files will contain the `Patient_ID` and `Report_Text` for each report.
 To evaluate the model's performance on a labeled dataset, use the evaluation script:
 
 ```bash
-python scripts/evaluate_model.py --model_path models/fine_tuned_bert --test_data {path to your test data}.csv
+python scripts/evaluate_model.py --model_path models/fine_tuned_bert --test_data {path to your test data}.csv --disease_terms {your diseases of interest}
+```
+For best results, be sure to include any aliases you expect in your data. (ie if evaluating for amyloidosis you might type "amyloid amyloidosis") 
+
+--use_negation_filter is an optional boolean state argument. Negation filter is off by default, but is engaged if this argument is passed. 
+
+For example, if you wanted to run evaluation on an amyloid dataset you saved as "combined_amyloid.csv" in the data directory, and further wanted to use the negation filter you could use the following command:
+
+```bash
+python scripts/evaluate_model.py --model_path models/fine_tuned_bert --test_data data/combined_amyloid.csv --disease_terms amyloid amyloidosis --use_negation_filter
 ```
 
 ### Input Data Structure for Evaluation
